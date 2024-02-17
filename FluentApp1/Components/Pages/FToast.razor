@@ -1,0 +1,24 @@
+﻿@page "/FToast"
+@rendermode InteractiveServer
+@inject IToastService ToastService
+
+<PageTitle>Fluent Toast</PageTitle>
+
+<h1>Fluent Toast</h1>
+
+<p>Click on this button to open a Toast. The toast is created by just specifying an intent and a message.</p>
+
+<FluentButton @onclick="@ShowToast" Appearance="Appearance.Accent">Open</FluentButton>
+
+@code
+{
+    int counter = 1;
+    void ShowToast()
+    {
+        Random rnd = new();
+
+        var intent = Enum.GetValues<ToastIntent>()[rnd.Next(10)];
+        var message = $"Simple Toast #{counter++}";
+        ToastService.ShowToast(intent, message);
+    }
+}

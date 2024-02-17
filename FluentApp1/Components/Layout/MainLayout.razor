@@ -7,6 +7,7 @@
         <NavMenu />
         <FluentBodyContent Class="body-content">
             <div class="content">
+                <FluentMessageBarProvider />
                 @Body
             </div>
         </FluentBodyContent>
@@ -19,6 +20,7 @@
             <a href="https://learn.microsoft.com/en-us/aspnet/core/blazor" target="_blank">About Blazor</a>
         </div>
     </FluentFooter>
+    <FluentToastProvider MaxToastCount="10" />    
 </FluentLayout>
 
 <div id="blazor-error-ui">
