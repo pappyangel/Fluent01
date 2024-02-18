@@ -1,4 +1,6 @@
 
 dotnet new install Microsoft.FluentUI.AspNetCore.Templates
 
+dotnet new fluentblazor --name FluentApp1
+
 dotnet new fluentblazor --name ftest3
