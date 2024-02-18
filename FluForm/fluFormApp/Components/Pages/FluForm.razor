@@ -1,0 +1,32 @@
+@page "/FluForm"
+@using Microsoft.AspNetCore.Components.Forms
+@rendermode InteractiveServer
+
+<PageTitle>FluForm</PageTitle>
+
+<h1>FluForm</h1>
+
+<EditForm Model="@person" OnValidSubmit="HandleValidSubmit">    
+    <DataAnnotationsValidator />
+    <FluentValidationSummary />
+    <FluentStack Orientation="Orientation.Vertical">
+        <div>
+            <FluentTextField Name="FirstName" @bind-Value="person.FirstName" Label="First Name" Required />
+        </div>
+        <div>
+            <FluentTextField Name="LastName" @bind-Value="person.LastName" Label="Last Name" Required />
+        </div>
+        <FluentButton Type="ButtonType.Submit" Appearance="Appearance.Accent">Submit</FluentButton>
+    </FluentStack>
+</EditForm> 
+
+@code {
+    @* [SupplyParameterFromForm] *@
+    private PersonModel person = new PersonModel();
+
+    private void HandleValidSubmit()
+    {
+        // Handle the valid form submission here
+    }
+}
+
