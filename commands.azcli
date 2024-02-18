@@ -4,3 +4,13 @@ dotnet new install Microsoft.FluentUI.AspNetCore.Templates
 dotnet new fluentblazor --name FluentApp1
 
 dotnet new fluentblazor --name ftest3
+
+dotnet new blazor -int Server --name ManFlu01
+dotnet add package Microsoft.FluentUI.AspNetCore.Components
+dotnet add package Microsoft.FluentUI.AspNetCore.Components.Icons
+dotnet add package Microsoft.FluentUI.AspNetCore.Components.Emoji
+In App.razor
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js" type="module" async></script>
+    <link href="_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css" rel="stylesheet" />
+
+
