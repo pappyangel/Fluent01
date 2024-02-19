@@ -12,10 +12,13 @@
     <FluentStack Orientation="Orientation.Vertical">
         <div>
             <FluentTextField Name="FirstName" @bind-Value="person.FirstName" Label="First Name" Required />
+            <FluentValidationMessage For="@(() => person.FirstName)" />
         </div>
         <div>
             <FluentTextField Name="LastName" @bind-Value="person.LastName" Label="Last Name" Required />
+            <FluentValidationMessage For="@(() => person.LastName)" />
         </div>
+        
         <FluentButton Type="ButtonType.Submit" Appearance="Appearance.Accent">Submit</FluentButton>
     </FluentStack>
 </EditForm> 
@@ -26,6 +29,8 @@
 
     private void HandleValidSubmit()
     {
+        int dog = 0;
+        dog++;
         // Handle the valid form submission here
     }
 }
